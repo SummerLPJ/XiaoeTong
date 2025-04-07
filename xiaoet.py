@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# Author：Lv PingJie
 # Date：2025/04/07
+__author__ = 'Summer Lv'
+
 import re
 import os
 import json
@@ -60,7 +61,7 @@ class Xet(object):
 
             # 使用 execjs 执行解密函数
             context = execjs.compile(js_code)
-            decrypted_data = context.call('Se', t, e)  # 假设 decodeFunction 是你的解密函数
+            decrypted_data = context.call('Se', t, e)
             return decrypted_data
 
         except FileNotFoundError:
